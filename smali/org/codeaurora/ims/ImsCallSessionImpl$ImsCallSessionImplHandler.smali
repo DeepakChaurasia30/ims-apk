@@ -130,13 +130,13 @@
 
     check-cast v0, Lcom/android/ims/internal/IImsCallSession;
 
-    new-instance v2, Lcom/android/ims/ImsReasonInfo;
+    new-instance v2, Landroid/telephony/ims/ImsReasonInfo;
 
     const-string v3, "Dial Failed"
 
-    invoke-direct {v2, v8, v8, v3}, Lcom/android/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
+    invoke-direct {v2, v8, v8, v3}, Landroid/telephony/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
 
-    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionStartFailed(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionStartFailed(Lcom/android/ims/internal/IImsCallSession;Landroid/telephony/ims/ImsReasonInfo;)V
 
     goto :goto_0
 
@@ -211,13 +211,13 @@
 
     check-cast v0, Lcom/android/ims/internal/IImsCallSession;
 
-    new-instance v2, Lcom/android/ims/ImsReasonInfo;
+    new-instance v2, Landroid/telephony/ims/ImsReasonInfo;
 
     const-string v3, "Add Participant Failed"
 
-    invoke-direct {v2, v8, v8, v3}, Lcom/android/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
+    invoke-direct {v2, v8, v8, v3}, Landroid/telephony/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
 
-    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionInviteParticipantsRequestFailed(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionInviteParticipantsRequestFailed(Lcom/android/ims/internal/IImsCallSession;Landroid/telephony/ims/ImsReasonInfo;)V
 
     goto :goto_0
 
@@ -400,13 +400,13 @@
 
     check-cast v0, Lcom/android/ims/internal/IImsCallSession;
 
-    new-instance v2, Lcom/android/ims/ImsReasonInfo;
+    new-instance v2, Landroid/telephony/ims/ImsReasonInfo;
 
     const-string v3, "Hold Failed"
 
-    invoke-direct {v2, v8, v8, v3}, Lcom/android/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
+    invoke-direct {v2, v8, v8, v3}, Landroid/telephony/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
 
-    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionHoldFailed(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionHoldFailed(Lcom/android/ims/internal/IImsCallSession;Landroid/telephony/ims/ImsReasonInfo;)V
 
     goto/16 :goto_0
 
@@ -448,13 +448,13 @@
 
     check-cast v0, Lcom/android/ims/internal/IImsCallSession;
 
-    new-instance v2, Lcom/android/ims/ImsReasonInfo;
+    new-instance v2, Landroid/telephony/ims/ImsReasonInfo;
 
     const-string v3, "Resume Failed"
 
-    invoke-direct {v2, v8, v8, v3}, Lcom/android/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
+    invoke-direct {v2, v8, v8, v3}, Landroid/telephony/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
 
-    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionResumeFailed(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionResumeFailed(Lcom/android/ims/internal/IImsCallSession;Landroid/telephony/ims/ImsReasonInfo;)V
 
     goto/16 :goto_0
 
@@ -496,13 +496,13 @@
 
     check-cast v0, Lcom/android/ims/internal/IImsCallSession;
 
-    new-instance v2, Lcom/android/ims/ImsReasonInfo;
+    new-instance v2, Landroid/telephony/ims/ImsReasonInfo;
 
     const-string v3, "Conference Failed"
 
-    invoke-direct {v2, v8, v8, v3}, Lcom/android/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
+    invoke-direct {v2, v8, v8, v3}, Landroid/telephony/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
 
-    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionMergeFailed(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionMergeFailed(Lcom/android/ims/internal/IImsCallSession;Landroid/telephony/ims/ImsReasonInfo;)V
 
     .line 631
     iget-object v0, p0, Lorg/codeaurora/ims/ImsCallSessionImpl$ImsCallSessionImplHandler;->this$0:Lorg/codeaurora/ims/ImsCallSessionImpl;
@@ -635,13 +635,13 @@
 
     check-cast v0, Lcom/android/ims/internal/IImsCallSession;
 
-    new-instance v2, Lcom/android/ims/ImsReasonInfo;
+    new-instance v2, Landroid/telephony/ims/ImsReasonInfo;
 
     const-string v3, "User Rejected"
 
-    invoke-direct {v2, v4, v8, v3}, Lcom/android/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
+    invoke-direct {v2, v4, v8, v3}, Landroid/telephony/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
 
-    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionStartFailed(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionStartFailed(Lcom/android/ims/internal/IImsCallSession;Landroid/telephony/ims/ImsReasonInfo;)V
 
     .line 654
     iget-object v0, p0, Lorg/codeaurora/ims/ImsCallSessionImpl$ImsCallSessionImplHandler;->this$0:Lorg/codeaurora/ims/ImsCallSessionImpl;
@@ -688,13 +688,13 @@
 
     check-cast v0, Lcom/android/ims/internal/IImsCallSession;
 
-    new-instance v2, Lcom/android/ims/ImsReasonInfo;
+    new-instance v2, Landroid/telephony/ims/ImsReasonInfo;
 
     const-string v3, "Deflect Failed"
 
-    invoke-direct {v2, v8, v8, v3}, Lcom/android/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
+    invoke-direct {v2, v8, v8, v3}, Landroid/telephony/ims/ImsReasonInfo;-><init>(IILjava/lang/String;)V
 
-    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionDeflectFailed(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-virtual {v1, v0, v2}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionDeflectFailed(Lcom/android/ims/internal/IImsCallSession;Landroid/telephony/ims/ImsReasonInfo;)V
 
     goto/16 :goto_0
 
@@ -793,12 +793,12 @@
     if-ne v0, v1, :cond_0
 
     .line 680
-    new-instance v7, Lcom/android/ims/ImsStreamMediaProfile;
+    new-instance v7, Landroid/telephony/ims/ImsStreamMediaProfile;
 
-    invoke-direct {v7}, Lcom/android/ims/ImsStreamMediaProfile;-><init>()V
+    invoke-direct {v7}, Landroid/telephony/ims/ImsStreamMediaProfile;-><init>()V
 
     .line 681
-    .local v7, "mediaProfile":Lcom/android/ims/ImsStreamMediaProfile;
+    .local v7, "mediaProfile":Landroid/telephony/ims/ImsStreamMediaProfile;
     iget-object v0, p0, Lorg/codeaurora/ims/ImsCallSessionImpl$ImsCallSessionImplHandler;->this$0:Lorg/codeaurora/ims/ImsCallSessionImpl;
 
     invoke-static {v0}, Lorg/codeaurora/ims/ImsCallSessionImpl;->access$700(Lorg/codeaurora/ims/ImsCallSessionImpl;)Z
@@ -808,7 +808,7 @@
     if-ne v0, v3, :cond_b
 
     .line 682
-    iput v8, v7, Lcom/android/ims/ImsStreamMediaProfile;->mAudioDirection:I
+    iput v8, v7, Landroid/telephony/ims/ImsStreamMediaProfile;->mAudioDirection:I
 
     .line 685
     :cond_b
@@ -820,13 +820,13 @@
 
     iget-object v1, p0, Lorg/codeaurora/ims/ImsCallSessionImpl$ImsCallSessionImplHandler;->this$0:Lorg/codeaurora/ims/ImsCallSessionImpl;
 
-    invoke-virtual {v0, v1, v7}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionProgressing(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsStreamMediaProfile;)V
+    invoke-virtual {v0, v1, v7}, Lorg/codeaurora/ims/ImsCallSessionListenerProxy;->callSessionProgressing(Lcom/android/ims/internal/IImsCallSession;Landroid/telephony/ims/ImsStreamMediaProfile;)V
 
     goto/16 :goto_0
 
     .line 696
     .end local v6    # "ar":Landroid/os/AsyncResult;
-    .end local v7    # "mediaProfile":Lcom/android/ims/ImsStreamMediaProfile;
+    .end local v7    # "mediaProfile":Landroid/telephony/ims/ImsStreamMediaProfile;
     :pswitch_a
     iget-object v0, p0, Lorg/codeaurora/ims/ImsCallSessionImpl$ImsCallSessionImplHandler;->this$0:Lorg/codeaurora/ims/ImsCallSessionImpl;
 

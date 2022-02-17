@@ -263,15 +263,15 @@
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/qualcomm/ims/csvt/CsvtCallTracker;Lcom/android/ims/ImsCall;Lcom/android/ims/ImsReasonInfo;)V
+.method static synthetic access$900(Lcom/qualcomm/ims/csvt/CsvtCallTracker;Lcom/android/ims/ImsCall;Landroid/telephony/ims/ImsReasonInfo;)V
     .locals 0
     .param p0, "x0"    # Lcom/qualcomm/ims/csvt/CsvtCallTracker;
     .param p1, "x1"    # Lcom/android/ims/ImsCall;
-    .param p2, "x2"    # Lcom/android/ims/ImsReasonInfo;
+    .param p2, "x2"    # Landroid/telephony/ims/ImsReasonInfo;
 
     .prologue
     .line 64
-    invoke-direct {p0, p1, p2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->sendCallDisconnectedEvent(Lcom/android/ims/ImsCall;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-direct {p0, p1, p2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->sendCallDisconnectedEvent(Lcom/android/ims/ImsCall;Landroid/telephony/ims/ImsReasonInfo;)V
 
     return-void
 .end method
@@ -531,10 +531,10 @@
     return-void
 .end method
 
-.method private onCallDisconnected(Lcom/android/ims/ImsCall;Lcom/android/ims/ImsReasonInfo;)V
+.method private onCallDisconnected(Lcom/android/ims/ImsCall;Landroid/telephony/ims/ImsReasonInfo;)V
     .locals 5
     .param p1, "call"    # Lcom/android/ims/ImsCall;
-    .param p2, "reasonInfo"    # Lcom/android/ims/ImsReasonInfo;
+    .param p2, "reasonInfo"    # Landroid/telephony/ims/ImsReasonInfo;
 
     .prologue
     const/4 v4, 0x0
@@ -641,7 +641,7 @@
 
     .line 484
     :cond_0
-    invoke-virtual {v0, p2}, Lcom/qualcomm/ims/csvt/CsvtConnection;->onDisconnect(Lcom/android/ims/ImsReasonInfo;)V
+    invoke-virtual {v0, p2}, Lcom/qualcomm/ims/csvt/CsvtConnection;->onDisconnect(Landroid/telephony/ims/ImsReasonInfo;)V
 
     .line 485
     iget-object v1, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->mRingingConn:Lcom/qualcomm/ims/csvt/CsvtConnection;
@@ -869,24 +869,24 @@
 
     const/4 v7, 0x4
 
-    invoke-virtual {v4, v5, v6, v7}, Lcom/android/ims/ImsManager;->createCallProfile(III)Lcom/android/ims/ImsCallProfile;
+    invoke-virtual {v4, v5, v6, v7}, Lcom/android/ims/ImsManager;->createCallProfile(III)Landroid/telephony/ims/ImsCallProfile;
 
     move-result-object v3
 
     .line 293
-    .local v3, "profile":Lcom/android/ims/ImsCallProfile;
+    .local v3, "profile":Landroid/telephony/ims/ImsCallProfile;
     const-string v4, "oir"
 
     const/4 v5, 0x0
 
-    invoke-virtual {v3, v4, v5}, Lcom/android/ims/ImsCallProfile;->setCallExtraInt(Ljava/lang/String;I)V
+    invoke-virtual {v3, v4, v5}, Landroid/telephony/ims/ImsCallProfile;->setCallExtraInt(Ljava/lang/String;I)V
 
     .line 294
     const-string v4, "call_domain"
 
     const/4 v5, 0x1
 
-    invoke-virtual {v3, v4, v5}, Lcom/android/ims/ImsCallProfile;->setCallExtraInt(Ljava/lang/String;I)V
+    invoke-virtual {v3, v4, v5}, Landroid/telephony/ims/ImsCallProfile;->setCallExtraInt(Ljava/lang/String;I)V
 
     .line 296
     iget-object v4, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->mImsManager:Lcom/android/ims/ImsManager;
@@ -895,7 +895,7 @@
 
     iget-object v6, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->mImsCallListener:Lcom/android/ims/ImsCall$Listener;
 
-    invoke-virtual {v4, v5, v3, v2, v6}, Lcom/android/ims/ImsManager;->makeCall(ILcom/android/ims/ImsCallProfile;[Ljava/lang/String;Lcom/android/ims/ImsCall$Listener;)Lcom/android/ims/ImsCall;
+    invoke-virtual {v4, v5, v3, v2, v6}, Lcom/android/ims/ImsManager;->makeCall(ILandroid/telephony/ims/ImsCallProfile;[Ljava/lang/String;Lcom/android/ims/ImsCall$Listener;)Lcom/android/ims/ImsCall;
 
     move-result-object v0
 
@@ -942,7 +942,7 @@
     .line 304
     .end local v0    # "call":Lcom/android/ims/ImsCall;
     .end local v2    # "numbers":[Ljava/lang/String;
-    .end local v3    # "profile":Lcom/android/ims/ImsCallProfile;
+    .end local v3    # "profile":Landroid/telephony/ims/ImsCallProfile;
     :goto_0
     iget-object v4, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->mForegroundConn:Lcom/qualcomm/ims/csvt/CsvtConnection;
 
@@ -1251,10 +1251,10 @@
     goto :goto_0
 .end method
 
-.method private sendCallDisconnectedEvent(Lcom/android/ims/ImsCall;Lcom/android/ims/ImsReasonInfo;)V
+.method private sendCallDisconnectedEvent(Lcom/android/ims/ImsCall;Landroid/telephony/ims/ImsReasonInfo;)V
     .locals 2
     .param p1, "call"    # Lcom/android/ims/ImsCall;
-    .param p2, "reasonInfo"    # Lcom/android/ims/ImsReasonInfo;
+    .param p2, "reasonInfo"    # Landroid/telephony/ims/ImsReasonInfo;
 
     .prologue
     .line 503
@@ -1269,7 +1269,7 @@
     invoke-static {v0, p1}, Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;->access$402(Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;Lcom/android/ims/ImsCall;)Lcom/android/ims/ImsCall;
 
     .line 505
-    invoke-static {v0, p2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;->access$602(Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;Lcom/android/ims/ImsReasonInfo;)Lcom/android/ims/ImsReasonInfo;
+    invoke-static {v0, p2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;->access$602(Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;Landroid/telephony/ims/ImsReasonInfo;)Landroid/telephony/ims/ImsReasonInfo;
 
     .line 506
     const/4 v1, 0x2
@@ -1759,11 +1759,11 @@
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;->access$600(Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;)Lcom/android/ims/ImsReasonInfo;
+    invoke-static {v0}, Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;->access$600(Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;)Landroid/telephony/ims/ImsReasonInfo;
 
     move-result-object v2
 
-    invoke-direct {p0, v1, v2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->onCallDisconnected(Lcom/android/ims/ImsCall;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-direct {p0, v1, v2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->onCallDisconnected(Lcom/android/ims/ImsCall;Landroid/telephony/ims/ImsReasonInfo;)V
 
     goto :goto_0
 

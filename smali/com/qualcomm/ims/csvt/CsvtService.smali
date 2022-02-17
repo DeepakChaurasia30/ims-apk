@@ -646,7 +646,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/ims/ImsCall;->getCallProfile()Lcom/android/ims/ImsCallProfile;
+    invoke-virtual {v5}, Lcom/android/ims/ImsCall;->getCallProfile()Landroid/telephony/ims/ImsCallProfile;
 
     move-result-object v5
 
@@ -657,13 +657,13 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/ims/ImsCall;->getCallProfile()Lcom/android/ims/ImsCallProfile;
+    invoke-virtual {v5}, Lcom/android/ims/ImsCall;->getCallProfile()Landroid/telephony/ims/ImsCallProfile;
 
     move-result-object v5
 
     const-string v6, "oi"
 
-    invoke-virtual {v5, v6}, Lcom/android/ims/ImsCallProfile;->getCallExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Landroid/telephony/ims/ImsCallProfile;->getCallExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

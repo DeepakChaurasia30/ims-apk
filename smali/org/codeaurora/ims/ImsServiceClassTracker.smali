@@ -1286,9 +1286,9 @@
     throw v0
 .end method
 
-.method public createCallSession(Lcom/android/ims/ImsCallProfile;Lcom/android/ims/internal/IImsCallSessionListener;)Lorg/codeaurora/ims/ImsCallSessionImpl;
+.method public createCallSession(Landroid/telephony/ims/ImsCallProfile;Lcom/android/ims/internal/IImsCallSessionListener;)Lorg/codeaurora/ims/ImsCallSessionImpl;
     .locals 6
-    .param p1, "profile"    # Lcom/android/ims/ImsCallProfile;
+    .param p1, "profile"    # Landroid/telephony/ims/ImsCallProfile;
     .param p2, "listener"    # Lcom/android/ims/internal/IImsCallSessionListener;
 
     .prologue
@@ -1305,7 +1305,7 @@
 
     move-object v5, p0
 
-    invoke-direct/range {v0 .. v5}, Lorg/codeaurora/ims/ImsCallSessionImpl;-><init>(Lcom/android/ims/ImsCallProfile;Lcom/android/ims/internal/IImsCallSessionListener;Lorg/codeaurora/ims/ImsSenderRxr;Landroid/content/Context;Lorg/codeaurora/ims/ImsServiceClassTracker;)V
+    invoke-direct/range {v0 .. v5}, Lorg/codeaurora/ims/ImsCallSessionImpl;-><init>(Landroid/telephony/ims/ImsCallProfile;Lcom/android/ims/internal/IImsCallSessionListener;Lorg/codeaurora/ims/ImsSenderRxr;Landroid/content/Context;Lorg/codeaurora/ims/ImsServiceClassTracker;)V
 
     .line 413
     .local v0, "session":Lorg/codeaurora/ims/ImsCallSessionImpl;
@@ -2886,38 +2886,38 @@
     if-eqz v0, :cond_1
 
     .line 472
-    new-instance v2, Lcom/android/ims/ImsSuppServiceNotification;
+    new-instance v2, Landroid/telephony/ims/ImsSuppServiceNotification;
 
-    invoke-direct {v2}, Lcom/android/ims/ImsSuppServiceNotification;-><init>()V
+    invoke-direct {v2}, Landroid/telephony/ims/ImsSuppServiceNotification;-><init>()V
 
     .line 473
-    .local v2, "suppServiceInfo":Lcom/android/ims/ImsSuppServiceNotification;
+    .local v2, "suppServiceInfo":Landroid/telephony/ims/ImsSuppServiceNotification;
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getNotificationType()I
 
     move-result v3
 
-    iput v3, v2, Lcom/android/ims/ImsSuppServiceNotification;->notificationType:I
+    iput v3, v2, Landroid/telephony/ims/ImsSuppServiceNotification;->notificationType:I
 
     .line 474
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getCode()I
 
     move-result v3
 
-    iput v3, v2, Lcom/android/ims/ImsSuppServiceNotification;->code:I
+    iput v3, v2, Landroid/telephony/ims/ImsSuppServiceNotification;->code:I
 
     .line 475
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getIndex()I
 
     move-result v3
 
-    iput v3, v2, Lcom/android/ims/ImsSuppServiceNotification;->index:I
+    iput v3, v2, Landroid/telephony/ims/ImsSuppServiceNotification;->index:I
 
     .line 476
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getNumber()Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v2, Lcom/android/ims/ImsSuppServiceNotification;->number:Ljava/lang/String;
+    iput-object v3, v2, Landroid/telephony/ims/ImsSuppServiceNotification;->number:Ljava/lang/String;
 
     .line 478
     invoke-virtual {p1}, Lorg/codeaurora/ims/ImsQmiIF$SuppSvcNotification;->getHistoryInfo()Ljava/lang/String;
@@ -2941,10 +2941,10 @@
 
     move-result-object v3
 
-    iput-object v3, v2, Lcom/android/ims/ImsSuppServiceNotification;->history:[Ljava/lang/String;
+    iput-object v3, v2, Landroid/telephony/ims/ImsSuppServiceNotification;->history:[Ljava/lang/String;
 
     .line 481
-    iget-object v3, v2, Lcom/android/ims/ImsSuppServiceNotification;->history:[Ljava/lang/String;
+    iget-object v3, v2, Landroid/telephony/ims/ImsSuppServiceNotification;->history:[Ljava/lang/String;
 
     invoke-direct {p0, v3}, Lorg/codeaurora/ims/ImsServiceClassTracker;->parsePhoneNumbers([Ljava/lang/String;)V
 
@@ -2973,11 +2973,11 @@
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 485
-    invoke-virtual {v0, v2}, Lorg/codeaurora/ims/ImsCallSessionImpl;->updateSuppServiceInfo(Lcom/android/ims/ImsSuppServiceNotification;)V
+    invoke-virtual {v0, v2}, Lorg/codeaurora/ims/ImsCallSessionImpl;->updateSuppServiceInfo(Landroid/telephony/ims/ImsSuppServiceNotification;)V
 
     .line 489
     .end local v1    # "forwardedCallHistory":Ljava/lang/String;
-    .end local v2    # "suppServiceInfo":Lcom/android/ims/ImsSuppServiceNotification;
+    .end local v2    # "suppServiceInfo":Landroid/telephony/ims/ImsSuppServiceNotification;
     :goto_0
     monitor-exit v4
 
@@ -3765,11 +3765,11 @@
     if-eqz v1, :cond_0
 
     .line 307
-    invoke-virtual {v0}, Lorg/codeaurora/ims/ImsCallSessionImpl;->getCallProfile()Lcom/android/ims/ImsCallProfile;
+    invoke-virtual {v0}, Lorg/codeaurora/ims/ImsCallSessionImpl;->getCallProfile()Landroid/telephony/ims/ImsCallProfile;
 
     move-result-object v1
 
-    invoke-virtual {v0, v0, v1}, Lorg/codeaurora/ims/ImsCallSessionImpl;->invokeCallResume(Lorg/codeaurora/ims/ImsCallSessionImpl;Lcom/android/ims/ImsCallProfile;)V
+    invoke-virtual {v0, v0, v1}, Lorg/codeaurora/ims/ImsCallSessionImpl;->invokeCallResume(Lorg/codeaurora/ims/ImsCallSessionImpl;Landroid/telephony/ims/ImsCallProfile;)V
 
     .line 309
     :cond_0
@@ -3889,9 +3889,9 @@
     throw v0
 .end method
 
-.method public restoreParticipantsAddressByLocalCache(Lcom/android/ims/ImsConferenceState;)V
+.method public restoreParticipantsAddressByLocalCache(Landroid/telephony/ims/ImsConferenceState;)V
     .locals 17
-    .param p1, "imsConferenceState"    # Lcom/android/ims/ImsConferenceState;
+    .param p1, "imsConferenceState"    # Landroid/telephony/ims/ImsConferenceState;
 
     .prologue
     .line 842
@@ -3979,7 +3979,7 @@
 
     move-object/from16 v0, p1
 
-    iget-object v15, v0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
+    iget-object v15, v0, Landroid/telephony/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
     invoke-direct {v7, v15}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
@@ -4255,7 +4255,7 @@
     .line 902
     move-object/from16 v0, p1
 
-    iget-object v15, v0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
+    iget-object v15, v0, Landroid/telephony/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
     invoke-virtual {v15, v14, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

@@ -272,21 +272,21 @@
     .end sparse-switch
 .end method
 
-.method private convertImsReasonToDisconnectStatus(Lcom/android/ims/ImsReasonInfo;)I
+.method private convertImsReasonToDisconnectStatus(Landroid/telephony/ims/ImsReasonInfo;)I
     .locals 1
-    .param p1, "reason"    # Lcom/android/ims/ImsReasonInfo;
+    .param p1, "reason"    # Landroid/telephony/ims/ImsReasonInfo;
 
     .prologue
     .line 108
     if-eqz p1, :cond_0
 
     .line 109
-    iget v0, p1, Lcom/android/ims/ImsReasonInfo;->mCode:I
+    iget v0, p1, Landroid/telephony/ims/ImsReasonInfo;->mCode:I
 
     packed-switch v0, :pswitch_data_0
 
     .line 114
-    iget-object v0, p1, Lcom/android/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
+    iget-object v0, p1, Landroid/telephony/ims/ImsReasonInfo;->mExtraMessage:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/qualcomm/ims/csvt/CsvtConnection;->convertImsErrorInfoToCsvtDisconnectStatus(Ljava/lang/String;)I
 
@@ -377,9 +377,9 @@
     return v0
 .end method
 
-.method public onDisconnect(Lcom/android/ims/ImsReasonInfo;)V
+.method public onDisconnect(Landroid/telephony/ims/ImsReasonInfo;)V
     .locals 2
-    .param p1, "reasonInfo"    # Lcom/android/ims/ImsReasonInfo;
+    .param p1, "reasonInfo"    # Landroid/telephony/ims/ImsReasonInfo;
 
     .prologue
     .line 95
@@ -390,7 +390,7 @@
     if-eq v0, v1, :cond_2
 
     .line 96
-    invoke-direct {p0, p1}, Lcom/qualcomm/ims/csvt/CsvtConnection;->convertImsReasonToDisconnectStatus(Lcom/android/ims/ImsReasonInfo;)I
+    invoke-direct {p0, p1}, Lcom/qualcomm/ims/csvt/CsvtConnection;->convertImsReasonToDisconnectStatus(Landroid/telephony/ims/ImsReasonInfo;)I
 
     move-result v0
 

@@ -56,10 +56,10 @@
     return-void
 .end method
 
-.method public onCallStartFailed(Lcom/android/ims/ImsCall;Lcom/android/ims/ImsReasonInfo;)V
+.method public onCallStartFailed(Lcom/android/ims/ImsCall;Landroid/telephony/ims/ImsReasonInfo;)V
     .locals 3
     .param p1, "imsCall"    # Lcom/android/ims/ImsCall;
-    .param p2, "reasonInfo"    # Lcom/android/ims/ImsReasonInfo;
+    .param p2, "reasonInfo"    # Landroid/telephony/ims/ImsReasonInfo;
 
     .prologue
     .line 539
@@ -75,7 +75,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/android/ims/ImsReasonInfo;->getCode()I
+    invoke-virtual {p2}, Landroid/telephony/ims/ImsReasonInfo;->getCode()I
 
     move-result v2
 
@@ -92,7 +92,7 @@
     .line 541
     iget-object v0, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker$2;->this$0:Lcom/qualcomm/ims/csvt/CsvtCallTracker;
 
-    invoke-static {v0, p1, p2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->access$900(Lcom/qualcomm/ims/csvt/CsvtCallTracker;Lcom/android/ims/ImsCall;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-static {v0, p1, p2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->access$900(Lcom/qualcomm/ims/csvt/CsvtCallTracker;Lcom/android/ims/ImsCall;Landroid/telephony/ims/ImsReasonInfo;)V
 
     .line 542
     return-void
@@ -121,10 +121,10 @@
     return-void
 .end method
 
-.method public onCallTerminated(Lcom/android/ims/ImsCall;Lcom/android/ims/ImsReasonInfo;)V
+.method public onCallTerminated(Lcom/android/ims/ImsCall;Landroid/telephony/ims/ImsReasonInfo;)V
     .locals 3
     .param p1, "imsCall"    # Lcom/android/ims/ImsCall;
-    .param p2, "reasonInfo"    # Lcom/android/ims/ImsReasonInfo;
+    .param p2, "reasonInfo"    # Landroid/telephony/ims/ImsReasonInfo;
 
     .prologue
     .line 546
@@ -140,7 +140,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/android/ims/ImsReasonInfo;->getCode()I
+    invoke-virtual {p2}, Landroid/telephony/ims/ImsReasonInfo;->getCode()I
 
     move-result v2
 
@@ -157,7 +157,7 @@
     .line 547
     iget-object v0, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker$2;->this$0:Lcom/qualcomm/ims/csvt/CsvtCallTracker;
 
-    invoke-static {v0, p1, p2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->access$900(Lcom/qualcomm/ims/csvt/CsvtCallTracker;Lcom/android/ims/ImsCall;Lcom/android/ims/ImsReasonInfo;)V
+    invoke-static {v0, p1, p2}, Lcom/qualcomm/ims/csvt/CsvtCallTracker;->access$900(Lcom/qualcomm/ims/csvt/CsvtCallTracker;Lcom/android/ims/ImsCall;Landroid/telephony/ims/ImsReasonInfo;)V
 
     .line 548
     return-void

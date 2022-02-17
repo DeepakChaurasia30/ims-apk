@@ -45,20 +45,20 @@
     .local v2, "cfInfoPArr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/codeaurora/ims/csvt/CallForwardInfoP;>;"
     if-eqz p0, :cond_0
 
-    instance-of v5, p0, [Lcom/android/ims/ImsCallForwardInfo;
+    instance-of v5, p0, [Landroid/telephony/ims/ImsCallForwardInfo;
 
     if-eqz v5, :cond_0
 
     .line 118
-    check-cast p0, [Lcom/android/ims/ImsCallForwardInfo;
+    check-cast p0, [Landroid/telephony/ims/ImsCallForwardInfo;
 
     .end local p0    # "result":Ljava/lang/Object;
     move-object v1, p0
 
-    check-cast v1, [Lcom/android/ims/ImsCallForwardInfo;
+    check-cast v1, [Landroid/telephony/ims/ImsCallForwardInfo;
 
     .line 119
-    .local v1, "cfInfoArray":[Lcom/android/ims/ImsCallForwardInfo;
+    .local v1, "cfInfoArray":[Landroid/telephony/ims/ImsCallForwardInfo;
     const-string v5, "CsvtUtils"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -137,14 +137,14 @@
     .local v0, "cf":Lorg/codeaurora/ims/csvt/CallForwardInfoP;
     aget-object v5, v1, v3
 
-    iget v5, v5, Lcom/android/ims/ImsCallForwardInfo;->mStatus:I
+    iget v5, v5, Landroid/telephony/ims/ImsCallForwardInfo;->mStatus:I
 
     iput v5, v0, Lorg/codeaurora/ims/csvt/CallForwardInfoP;->status:I
 
     .line 125
     aget-object v5, v1, v3
 
-    iget v5, v5, Lcom/android/ims/ImsCallForwardInfo;->mCondition:I
+    iget v5, v5, Landroid/telephony/ims/ImsCallForwardInfo;->mCondition:I
 
     invoke-static {v5}, Lcom/qualcomm/ims/csvt/CsvtUtils;->getCfReasonFromUtCondition(I)I
 
@@ -155,21 +155,21 @@
     .line 126
     aget-object v5, v1, v3
 
-    iget v5, v5, Lcom/android/ims/ImsCallForwardInfo;->mToA:I
+    iget v5, v5, Landroid/telephony/ims/ImsCallForwardInfo;->mToA:I
 
     iput v5, v0, Lorg/codeaurora/ims/csvt/CallForwardInfoP;->toa:I
 
     .line 127
     aget-object v5, v1, v3
 
-    iget-object v5, v5, Lcom/android/ims/ImsCallForwardInfo;->mNumber:Ljava/lang/String;
+    iget-object v5, v5, Landroid/telephony/ims/ImsCallForwardInfo;->mNumber:Ljava/lang/String;
 
     iput-object v5, v0, Lorg/codeaurora/ims/csvt/CallForwardInfoP;->number:Ljava/lang/String;
 
     .line 128
     aget-object v5, v1, v3
 
-    iget v5, v5, Lcom/android/ims/ImsCallForwardInfo;->mTimeSeconds:I
+    iget v5, v5, Landroid/telephony/ims/ImsCallForwardInfo;->mTimeSeconds:I
 
     iput v5, v0, Lorg/codeaurora/ims/csvt/CallForwardInfoP;->timeSeconds:I
 
@@ -183,7 +183,7 @@
 
     .line 132
     .end local v0    # "cf":Lorg/codeaurora/ims/csvt/CallForwardInfoP;
-    .end local v1    # "cfInfoArray":[Lcom/android/ims/ImsCallForwardInfo;
+    .end local v1    # "cfInfoArray":[Landroid/telephony/ims/ImsCallForwardInfo;
     .end local v3    # "i":I
     .end local v4    # "length":I
     :cond_0
@@ -278,20 +278,20 @@
     .local v1, "enabled":Z
     if-eqz p0, :cond_0
 
-    instance-of v4, p0, [Lcom/android/ims/ImsSsInfo;
+    instance-of v4, p0, [Landroid/telephony/ims/ImsSsInfo;
 
     if-eqz v4, :cond_0
 
     .line 106
-    check-cast p0, [Lcom/android/ims/ImsSsInfo;
+    check-cast p0, [Landroid/telephony/ims/ImsSsInfo;
 
     .end local p0    # "result":Ljava/lang/Object;
     move-object v0, p0
 
-    check-cast v0, [Lcom/android/ims/ImsSsInfo;
+    check-cast v0, [Landroid/telephony/ims/ImsSsInfo;
 
     .line 107
-    .local v0, "cwInfo":[Lcom/android/ims/ImsSsInfo;
+    .local v0, "cwInfo":[Landroid/telephony/ims/ImsSsInfo;
     array-length v4, v0
 
     if-lez v4, :cond_0
@@ -303,7 +303,7 @@
     .line 108
     aget-object v4, v0, v3
 
-    iget v4, v4, Lcom/android/ims/ImsSsInfo;->mStatus:I
+    iget v4, v4, Landroid/telephony/ims/ImsSsInfo;->mStatus:I
 
     if-ne v4, v2, :cond_1
 
@@ -334,11 +334,11 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 112
-    .end local v0    # "cwInfo":[Lcom/android/ims/ImsSsInfo;
+    .end local v0    # "cwInfo":[Landroid/telephony/ims/ImsSsInfo;
     :cond_0
     return v1
 
-    .restart local v0    # "cwInfo":[Lcom/android/ims/ImsSsInfo;
+    .restart local v0    # "cwInfo":[Landroid/telephony/ims/ImsSsInfo;
     :cond_1
     move v1, v3
 

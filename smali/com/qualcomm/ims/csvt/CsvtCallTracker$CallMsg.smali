@@ -17,7 +17,7 @@
 # instance fields
 .field private call:Lcom/android/ims/ImsCall;
 
-.field private reasonInfo:Lcom/android/ims/ImsReasonInfo;
+.field private reasonInfo:Landroid/telephony/ims/ImsReasonInfo;
 
 .field private state:Lcom/qualcomm/ims/csvt/CsvtConnection$State;
 
@@ -90,25 +90,25 @@
     return-object p1
 .end method
 
-.method static synthetic access$600(Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;)Lcom/android/ims/ImsReasonInfo;
+.method static synthetic access$600(Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;)Landroid/telephony/ims/ImsReasonInfo;
     .locals 1
     .param p0, "x0"    # Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;
 
     .prologue
     .line 122
-    iget-object v0, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;->reasonInfo:Lcom/android/ims/ImsReasonInfo;
+    iget-object v0, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;->reasonInfo:Landroid/telephony/ims/ImsReasonInfo;
 
     return-object v0
 .end method
 
-.method static synthetic access$602(Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;Lcom/android/ims/ImsReasonInfo;)Lcom/android/ims/ImsReasonInfo;
+.method static synthetic access$602(Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;Landroid/telephony/ims/ImsReasonInfo;)Landroid/telephony/ims/ImsReasonInfo;
     .locals 0
     .param p0, "x0"    # Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;
-    .param p1, "x1"    # Lcom/android/ims/ImsReasonInfo;
+    .param p1, "x1"    # Landroid/telephony/ims/ImsReasonInfo;
 
     .prologue
     .line 122
-    iput-object p1, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;->reasonInfo:Lcom/android/ims/ImsReasonInfo;
+    iput-object p1, p0, Lcom/qualcomm/ims/csvt/CsvtCallTracker$CallMsg;->reasonInfo:Landroid/telephony/ims/ImsReasonInfo;
 
     return-object p1
 .end method
